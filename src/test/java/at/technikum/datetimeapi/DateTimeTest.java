@@ -4,8 +4,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class DateTimeTest {
 
@@ -30,6 +32,21 @@ class DateTimeTest {
 
         //assert
         assertEquals(LocalDate.now(), result);
+
+    }
+
+    @Test
+    void now() {
+        //arrange
+
+
+
+        //act
+
+
+
+        //assert
+        assertThat(dt.getNow()).isBeforeOrEqualTo(LocalTime.now());
 
     }
 }
