@@ -23,5 +23,10 @@ public class DateTimeController {
         return new ResponseEntity<>(dt, HttpStatus.OK);
     }
 
+    @GetMapping("/now")
+    public ResponseEntity<LocalTime> getNow () {
+        LocalTime tn= LocalTime.now();
+        return new ResponseEntity<>(tn, HttpStatus.OK);
+    }
 
 }
